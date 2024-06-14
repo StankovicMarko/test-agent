@@ -6,7 +6,7 @@
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [software.amazon.glue/schema-registry-serde "1.1.17"]]
   :java-source-paths ["java_src"]
-  :jvm-opts ["-javaagent:grafana-opentelemetry-java.jar"
+  :jvm-opts ["-javaagent:opentelemetry-javaagent.jar"
              "-Dotel.resource.attributes=service.name=dev-webserver"
              "-Dotel.metrics.exporter=prometheus"
              "-Dotel.metric.export.interval=5000"

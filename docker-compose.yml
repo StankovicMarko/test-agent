@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  prometheus:
+    network_mode: "host"
+    image: prom/prometheus
+    volumes:
+      - ./dev-resources/otel/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"  # Prometheus web UI
